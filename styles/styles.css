@@ -1,40 +1,26 @@
 /* Navigation Section */
-
 #header .navbar {
     background-color: #000;
-    padding: 0 2rem;
 }
 
 #header .logo {
     width: 6.5rem;
     height: 6.5rem;
-    transition: transform 0.3s ease;
 }
-
-#header .logo:hover{
-    transform: skew(-10deg, -10deg);
-
-}
-
-
 
 #header .contact {
     margin: 1rem 0;
     color: #0B60B0;
     border: 0.1rem solid #0B60B0;
     border-radius: 30%;
-    transition: transform 0.3s ease;
-    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#header .contact:hover{
-    color:#edf7fc;
+#header .contact:hover {
+    color: #edf7fc;
     transform: scale(1.1);
-    box-shadow: 0 0 2rem #0B60B0;
-
-
+    animation: shadowEffect 5s ease;
 }
-
 
 /* Home Section */
 body, html {
@@ -43,11 +29,12 @@ body, html {
     font-family: Arial, sans-serif;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .background-section {
     position: relative;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
 }
 
@@ -65,81 +52,51 @@ body, html {
     position: absolute;
     width: 5rem; /* Adjust the size as needed */
     height: 5rem; /* Adjust the size as needed */
-    /* opacity: 0.8; */
 }
 
-/* animation content */
-
 #home .img-fluid {
-    border-radius: 2rem;
+    border-radius: 50%;
     opacity: 90%;
     transition: box-shadow 0.3s ease;
 }
 
-#home .img-fluid:hover{
-    box-shadow: 0 0 2rem #0B60B0;
-  }
-  
-#home .content {
-    position: relative;
-    text-align: center;
-    padding-top: 10vh;
-    /* padding-left: 24vh; */
-    color: #edf7fc;
-    display: inline-block;
-    /* padding:3rem 2rem; */
+#home .img-fluid:hover {
+    animation: shadowEffect 5s ease;
 }
 
+#home .content {
+    text-align: center;
+    color: #edf7fc;
+}
 
 .text {
-    font-size: 3rem;
-    background-color: #000;
     transition: color 0.3s ease;
-    display: inline;
 }
 
 .text:hover {
     color: #0B60B0;
 }
 
-
 #home .fw-bold {
+    font-size: 4rem;
     font-family: "Merriweather", serif;
     font-weight: 700;
     font-style: normal;
 }
 
 #home .fw-light {
+    font-size: 3rem;
     font-family: "Fira Sans", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
 
 /* About Section */
-
-#about .fw-bold {
-    font-family: "Merriweather", serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 3rem;
-    color: #0B60B0;
-    margin: 0;
-    text-decoration: underline;
-    text-underline-offset: 1.3rem;
-    transition: color 0.3s ease;
-}
-
-
-#about .fw-bold:hover {
-    color: #000;
-}
-
 #about {
     background-color: #edf7fc;
     color: #000;
     text-align: center;
-    padding: 7rem 0;
-
+    padding: 5rem 0;
 }
 
 .name {
@@ -149,25 +106,23 @@ body, html {
     font-style: normal;
     padding: 0 0 1rem 0;
     color: #0B60B0;
-    text-align: center; 
     transition: color 0.3s ease;
 }
 
-.name:hover{
-    color:#000;
+.name:hover {
+    color: #000;
 }
 
 #about .content {
     font-family: "Fira Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
-    padding: 0 14rem;
+    padding: 0 10%;
     color: #0B60B0;
     text-align: center;
 }
 
 /* Skills Section */
-
 #skills {
     padding: 3rem 0;
     background-color: #000;
@@ -192,17 +147,15 @@ body, html {
 
 #skills .col {
     padding: 3rem 0;
-    margin: 0.2rem;
+    margin: 1rem;
     background-color: #edf7fc;
     border-radius: 2rem;
     transition: box-shadow 0.3s ease;
 }
 
 #skills .col:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 3rem #0B60B0;
+    animation: hover-animation 5s forwards;
 }
-
 
 #skills .skill-head {
     font-family: "Merriweather", serif;
@@ -222,10 +175,8 @@ body, html {
 }
 
 /* Projects Section */
-
 #projects {
     background-color: #edf7fc;
-    padding: 1rem 18rem;
 }
 
 #projects .name {
@@ -242,12 +193,17 @@ body, html {
     width: 20rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-  
-#projects .project-box:hover {
-    /* transform: translateY(-10px); */
-    box-shadow: 0 0 2rem #0B60B0;
-   
 
+#projects .project-box:hover {
+    animation: hover-animation 5s forwards;
+}
+
+#projects .row {
+    padding: 0 12%;
+}
+
+#projects .col {
+    margin: 1rem 0;
 }
 
 #projects .project-head {
@@ -269,14 +225,22 @@ body, html {
     font-style: normal;
     color: #0B60B0;
     text-align: center;
+    margin: 2rem 0;
+}
+
+#projects .lib {
+    margin: 3rem 0;
+}
+
+#projects .ts {
+    margin: 1rem 0;
 }
 
 /* Experience Section */
-
 #experience {
     background-color: #edf7fc;
-    padding-bottom: 4rem;
-    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 0rem;
 }
 
 #experience .project-box {
@@ -285,12 +249,10 @@ body, html {
     background-color: #edf7fc;
     width: 75%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 #experience .project-box:hover {
-    /* transform: translateY(-10px); */
-    box-shadow: 0 0 2rem #0B60B0;
+    animation: hover-animation 5s forwards;
 }
 
 #experience .project-head {
@@ -314,6 +276,7 @@ body, html {
     text-align: center;
 }
 
+/* Footer Section */
 #footer {
     background-color: #000;
     padding: 1rem 0 0 0;
@@ -326,13 +289,13 @@ body, html {
     padding: 1rem;
     border: 0.1rem solid #edf7fc;
     border-radius: 50%;
-    margin:2rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
     transition: box-shadow 0.3s ease;
 }
 
 #footer .row {
-    padding: 0 40%;
     transition: color 0.3s ease;
+    padding: 0 40%;
 }
 
 .contact-icon:hover {
@@ -347,22 +310,20 @@ body, html {
     font-weight: 550;
     font-style: normal;
     font-size: 1.5rem;
-    margin:0;
+    margin: 0;
 }
-
 
 #footer .footer-copyright {
     color: #edf7fc;
     padding-top: 1rem;
     font-family: "Fira Sans", sans-serif;
-    font-weight: 450;
+    font-weight: 400;
     font-style: normal;
+    margin-bottom: 0;
 }
 
-#footer .img-fluid{
-    width:29rem;
-    height: 29rem;
-    padding: 1rem 0;
+#footer p{
+    margin:0rem;
 }
 
 .back-to-top {
@@ -379,39 +340,130 @@ body, html {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-    /* Initially hidden */
+    cursor: pointer;  
+    transition: background-color 0.3s, border 0.3s, color 0.3s;  
 }
 
-.back-to-top:hover {
+.back-to-top.hover-effect {
     background-color: #edf7fc;
     border: 0.1rem solid #0B60B0;
     color: #0B60B0;
 }
 
-
 /* Scroll Bar */
-
-/* Custom scrollbar for webkit browsers */
 body::-webkit-scrollbar {
     width: 0.6rem;
-    /* Width of the scrollbar */
     height: 0.6rem;
-    /* Height of the scrollbar (for horizontal scrollbar) */
 }
 
 body::-webkit-scrollbar-track {
-    background: #edf7fc;
-    /* Background of the scrollbar track */
+    background: #000;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #000;
-    /* Color of the scrollbar thumb */
+    background: #0B60B0;
 }
 
 body::-webkit-scrollbar-thumb:hover {
     background: #0B60B0;
-    /* Color of the scrollbar thumb when hovered */
+}
+
+/* Media Query */
+@media (max-width: 500px) {
+    .image {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    #header .logo {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #home .img-fluid {
+        height: 130%;
+        width: 130%;
+        border-radius: 50%;
+    }
+
+    #home .fw-bold {
+        font-size: 3rem;
+    }
+    
+    #home .fw-light {
+        font-size: 2rem;
+    }
+    
+
+    #home .col-12 {
+        margin: 5% 0;
+    }
+
+    #projects .row {
+        padding: 0%;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .text{
+        font-size:3rem;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    #projects .projects {
+        padding: 1.5rem 0;
+    }
+
+    #experience .project-box {
+        width: 100%;
+    }
+
+    #about .content {
+        font-size: 1rem;
+    }
+
+    #footer .row {
+        padding: 0 20%;
+    }
+
+    #footer .content {
+        font-size: 1rem;
+    }
+
+    #footer .contact-icon {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    #footer .footer-copyright {
+        font-size: 0.8rem;
+    }
+
+    
+}
+
+/* Animation CSS */
+@keyframes shadowEffect {
+    0% {
+        box-shadow: 0 0 2rem #0B60B0;
+    }
+    100% {
+        box-shadow: none;
+    }
+}
+
+@keyframes hover-animation {
+    
+    0% {
+        box-shadow: 0 0 5rem #0B60B0;
+    }
+    100% {
+        box-shadow: none;
+    }
 }
