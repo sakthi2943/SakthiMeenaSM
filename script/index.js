@@ -1,11 +1,11 @@
 const images = [
-    "images/bootstrap.png",
-    "images/css.png",
-    "images/flutter.png",
-    "images/github.jpg",
-    "images/html.png",
-    "images/java.png",
-    "images/javascript.png"
+    "../images/bootstrap.png",
+    "../images/css.png",
+    "../images/flutter.png",
+    "../images/github.png",
+    "../images/html.png",
+    "../images/java.png",
+    "../images/javascript.png"
     // Add paths to your images
 ];
 
@@ -55,11 +55,14 @@ for (let i = 0; i < images.length; i++) {
     animateImage(image);
 }
 
-for (let i = 0; i < images.length; i++) {
-    const image = createImage(i);
-    animateImage(image);
-}
+// for (let i = 0; i < images.length; i++) {
+//     const image = createImage(i);
+//     animateImage(image);
+// }
 
+// Back to Top Button
+
+// Get the button
 // Back to Top Button
 
 // Get the button
@@ -81,5 +84,17 @@ function scrollFunction() {
 // When the user clicks on the button, scroll to the top of the document
 mybutton.onclick = function () {
     document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 };
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    backToTopButton.addEventListener('mouseenter', () => {
+        backToTopButton.classList.add('hover-effect');
+        setTimeout(() => {
+            backToTopButton.classList.remove('hover-effect');
+        }, 1000); // 1 second
+    });
+});
