@@ -1,11 +1,11 @@
 const images = [
-    "../images/bootstrap.png",
-    "../images/css.png",
-    "../images/flutter.png",
-    "../images/github.png",
-    "../images/html.png",
-    "../images/java.png",
-    "../images/javascript.png"
+    "images/bootstrap.png",
+    "images/css.png",
+    "images/flutter.png",
+    "images/github.png",
+    "images/html.png",
+    "images/java.png",
+    "images/javascript.png"
     // Add paths to your images
 ];
 
