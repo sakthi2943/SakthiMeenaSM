@@ -66,6 +66,7 @@ body, html {
 
 #home .content {
     text-align: center;
+    padding-top: 2%;
     color: #edf7fc;
 }
 
@@ -236,6 +237,103 @@ body, html {
     margin: 1rem 0;
 }
 
+#projects .modal{
+    padding: 0;
+}
+
+#projects .modal-header{
+    border:none;
+}
+
+#projects .modal-title{
+    font-family: "Merriweather", serif;
+    font-weight: 550;
+    font-style: normal;
+    font-size: 2rem;
+    /* padding-top: 2rem; */
+    transition: color 0.3s ease;
+    color:#0B60B0;
+    text-align: left;
+}
+
+#projects .modal-title:hover{
+    color: #0B60B0;
+}
+
+#projects .modal-icon{
+    color: #0B60B0;
+    font-size: 2rem;
+    padding: 0.3rem;
+    margin:0 0.8rem;
+    border-radius: 10%;
+    transition: box-shadow 0.3s ease;
+}
+
+#projects .modal-icon:hover{
+    color: #0B60B0;
+    box-shadow: 0 0 2rem #0B60B0;
+}
+
+#projects .modal-body{
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 1rem;
+    color: #000;
+    text-align: justify;
+
+}
+
+#projects .close{
+    display: none;
+}
+
+
+
+#projects .modal-content{
+    color: #000;
+    /* border:hidden; */
+    background-color: #edf7fc;
+    border: #0B60B0 0.1rem solid;
+    
+
+}
+
+#projects .modal-footer{
+    border:none;
+}
+
+/* Scroll Bar */
+/* Webkit browsers (Chrome, Safari) */
+.modal-dialog-scrollable .modal-content::-webkit-scrollbar {
+    width: 0.6rem !important; /* width of the entire scrollbar */
+    height: 0.6rem !important; /* height of the entire scrollbar */
+}
+
+.modal-dialog-scrollable .modal-content::-webkit-scrollbar-track {
+    background: #000 !important; /* color of the scrollbar track */
+}
+
+.modal-dialog-scrollable .modal-content::-webkit-scrollbar-thumb {
+    background: #0B60B0 !important; /* color of the scrollbar thumb */
+}
+
+.modal-dialog-scrollable .modal-content::-webkit-scrollbar-thumb:hover {
+    background: #0B60B0 !important; /* color of the thumb when hovered */
+}
+
+/* Firefox */
+.modal-dialog-scrollable .modal-content {
+    scrollbar-width: thin !important; /* makes the scrollbar thinner */
+    scrollbar-color: #0B60B0 #000 !important; /* thumb color and track color */
+}
+
+/* Edge and IE */
+.modal-dialog-scrollable .modal-content {
+    -ms-overflow-style: -ms-autohiding-scrollbar !important; /* auto-hiding scrollbar */
+}
+
+
 /* Experience Section */
 #experience {
     background-color: #edf7fc;
@@ -326,6 +424,17 @@ body, html {
     margin:0rem;
 }
 
+#footer .footer-icon{
+    font-size: 1rem;
+    color: #edf7fc;
+    margin-right:0.5rem;
+    padding-top: 1.1rem;
+}
+
+#footer .table-data{
+    text-align: right;
+}
+
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -341,7 +450,7 @@ body, html {
     justify-content: center;
     font-size: 1.5rem;
     cursor: pointer;  
-    transition: background-color 0.3s, border 0.3s, color 0.3s;  
+    transition: background-color 0.3s, color 0.3s;  
 }
 
 .back-to-top.hover-effect {
@@ -419,6 +528,13 @@ body::-webkit-scrollbar-thumb:hover {
     #projects .projects {
         padding: 1.5rem 0;
     }
+    #projects .close{
+        display:unset;
+        height: 1.5rem;
+        width:1.5rem;
+        background-color: #000;
+    }
+    
 
     #experience .project-box {
         width: 100%;
@@ -439,6 +555,10 @@ body::-webkit-scrollbar-thumb:hover {
     #footer .contact-icon {
         font-size: 1.5rem;
         padding: 0.75rem;
+    }
+
+    #footer .table-data{
+        text-align:right;
     }
 
     #footer .footer-copyright {
